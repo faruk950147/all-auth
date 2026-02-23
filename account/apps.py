@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 
 
-class AccountsConfig(AppConfig):
+class AccountConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'accounts'
+    name = 'account'
     label = 'accounts'
     verbose_name = 'Accounts Management'

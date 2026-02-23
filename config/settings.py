@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
-    
+    # custom apps
     'account.apps.AccountConfig',
 ]
 
@@ -152,8 +152,8 @@ ACCOUNT_SIGNUP_FIELDS = [
     "password2*",
 ]
 ACCOUNT_FORMS = {
-    'signup': 'accounts.forms.CustomSignupForm',
-    'login': 'accounts.forms.CustomLoginForm',
+    'signup': 'account.forms.CustomSignupForm',
+    'login': 'account.forms.CustomLoginForm',
 }
 
 EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')

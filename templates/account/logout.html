@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Logged Out{% endblock %}
+
+{% block content %}
+<main class="main py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card shadow">
+                    <div class="card-body text-center">
+
+                        <h3 class="mb-4">Choose an action</h3>
+                        <form method="post" action="{% url 'account_logout' %}" class="d-inline">
+                            {% csrf_token %}
+                            {{ redirect_field }}
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
